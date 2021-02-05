@@ -11,7 +11,6 @@
 #include "utils.h"
 
 
-
 int main() {
     int array_int[4] = {1, 2, 3, 4};
     int idx_int = find_int(array_int, 4, 4);
