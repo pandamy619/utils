@@ -19,7 +19,17 @@ double sum(double *array, int length) {
 }
 
 
-int find_int(double *array, int length, int variable) {
+int find_int(int *array, int length, int variable) {
+    for (int i = 0; i < length; i++) {
+        if (variable == array[i]) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+int find_double(double *array, int length, int variable) {
     for (int i = 0; i < length; i++) {
         if (variable == array[i]) {
             return i;

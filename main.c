@@ -10,13 +10,30 @@
 #include "main.h"
 #include "utils.h"
 
+
+
+void f(void (*a)()) {
+    a();
+}
+
+void test() {
+    printf("hello world\n");
+}
+
+
 int main() {
-    double array[4] = {1, 2, 3, 4};
-    int idx = find_int(array, 4, 3);
+    int array_int[4] = {1, 2, 3, 4};
+    int idx_int = find_int(array_int, 4, 4);
+    printf("index:%d\n", idx_int);
+    
+    double array_double[4] = {1, 2, 3, 4};
+    int idx = find_double(array_double, 4, 3);
     printf("index:%d\n", idx);
     
     char *array_char[4] = {"test_1", "test_2", "test_3", "test_4"};
     int idx_char = find_char(array_char, 4, "test_2");
     printf("index:%d\n", idx_char);
+
+    
     return 0;
 }
